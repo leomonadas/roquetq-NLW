@@ -19,6 +19,7 @@ html{
     --grey-dark: #4d5e77;
     --grey-blue: #A1B2CD;
     --grey-light: #E5EAF1;
+    --grey-medium: #eaecf2;
     /* Esse font size é feito para que o padrão seja 10px e assim seja fácil utilizar o REM */
     font-size: 62.5%;
 }
@@ -78,7 +79,7 @@ button:hover, .button:hover{
     filter: brightness(1.2);
 }
 
-button>img
+button>img,
 .button>img{
     margin-right: 1rem;
     width: 2rem;
@@ -91,9 +92,21 @@ button.outlined,
     border: .2rem solid var(--blue);
 }
 
+button.red,
+.button.red{
+    background: var(--red);
+    color: var(--white);
+}
+
+button.grey,
+.button.grey{
+    background: var(--grey-light);
+    color: var(--grey-dark);
+}
+
 .content header{
     width: 80%;
-    margin: 3.5rem;
+    margin: 3.5rem auto;
 }
 
 .content header img{
