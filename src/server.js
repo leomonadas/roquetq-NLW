@@ -6,6 +6,8 @@ const server = express();
 
 server.set('view engine', 'ejs');
 
+server.use(express.static('public'))
+
 // __dirname chama a pasta na qual o arquivo está, então ela chama a parta src e indica que o views está lá
 server.set('views', path.join(__dirname, 'views'))
 
