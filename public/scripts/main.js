@@ -21,9 +21,15 @@ deleteButtons.forEach(button => {
 });
 
 function handleClick(event, check = true){
-    event.preventDefault()
+    event.preventDefault();
 
     const text = check ? "Marcar como lida" : "Excluir";
+    const slug = check ? "check" : "delete";
+    const roomId = document.querySelector("#room-id").CDATA_SECTION_NODE.id;
+    const questionId = event.target.dataset.id;
+
+    const form = document.querySelector(".modal form");
+    form.setAttribute("action", `/question/${roomId}/${questionId}/${slug}`)
 
     modalTitle.innerHTML = `${text} esta pergunta`
     modalDescription.innerHTML = `Tem certeza que deseja ${text.toLowerCase()} esta pergunta?`
