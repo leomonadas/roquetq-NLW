@@ -25,7 +25,7 @@ function handleClick(event, check = true){
 
     const text = check ? "Marcar como lida" : "Excluir";
     const slug = check ? "check" : "delete";
-    const roomId = document.querySelector("#room-id").CDATA_SECTION_NODE.id;
+    const roomId = document.querySelector("#room-id").dataset.id;
     const questionId = event.target.dataset.id;
 
     const form = document.querySelector(".modal form");
