@@ -87,3 +87,20 @@ input, button, .button{
     bottom: -15rem;
     right: 5.6rem;
 }
+
+.notfound{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20%;
+}
+
+.titlenotfound{
+    font-family: 'Poppins', sans-serif; 
+    color: var(--black);
+}
+
+.imagenotfound{
+    max-width: 100%; 
+    max-height:100%;
+}

@@ -14,6 +14,10 @@ route.post('/enterroom', RoomController.enter);
 route.post('/question/create/:room', QuestionController.create);
 route.post('/question/:room/:question/:action', QuestionController.index);
 
+route.use(function(req, res, next) {
+    res.status(404).render('index', {page: 'pagenotfound'}); ;
+});
+
 module.exports = route;
 
 
